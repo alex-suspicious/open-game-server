@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ogs</title>
+  </head>
+  <body>
+    <ul id="messages"></ul>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+      var socket = io();
+
+      function login(name,password) {
+        socket.emit("login",name,password,function( msg ) {
+          console.log(msg);
+        });
+      }
+
+      function my_id() {
+        socket.emit("my_id",function( msg ) {
+          console.log(msg);
+        });
+      }
+
+      function inventory() {
+        socket.emit("inventory",function( msg ) {
+          console.log( JSON.parse(msg) );
+        });
+      }
+
+      function send_item(reciver_id, item_id, amount) {
+        socket.emit("send_item",reciver_id, item_id, amount,function( msg ) {
+          console.log( msg );
+        });
+      }
+
+      function add_item(reciver_id, item_id, amount) {
+        socket.emit("admin_give_item",reciver_id, item_id, amount,function( msg ) {
+          console.log( msg );
+        });
+      }
+   
+
+    </script>
+  </body>
+</html>
