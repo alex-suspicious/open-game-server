@@ -31,5 +31,5 @@ To report bugs or request new features please contact me on [my discord server](
 Dependencies
 ---
 
-express
-socket.io
+1. express
+2. socket.io
