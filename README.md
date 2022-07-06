@@ -33,3 +33,4 @@ Dependencies
 
 1. express
 2. socket.io
+3. sqlite3
