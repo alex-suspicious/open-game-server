@@ -1,4 +1,3 @@
-# open-game-server
 Open Game Server
 =========
 
